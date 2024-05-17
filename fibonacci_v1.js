@@ -1,5 +1,4 @@
-//Fibonacci Sequence
-
+//Fibonacci Sequence Version 1
 const fibonacci = function(num) {
   const allFibs = [];
   if(num < 2) {
@@ -8,14 +7,14 @@ const fibonacci = function(num) {
     let prev = 0;
     let curr = 1;
     allFibs.push(prev, curr);
-    for(let i = 0; i < num; i++) {
+    for(let i = 2; i < num; i++) {
       const next = prev + curr;
       prev = curr;
       curr = next;
-      allFibs.push(next);
+      allFibs.push(curr);
     }
   }
-console.log(allFibs);
+  return allFibs;
 };
 
-fibonacci(10);
+console.log(fibonacci(10));
